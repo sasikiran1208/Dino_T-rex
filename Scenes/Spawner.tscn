@@ -1,0 +1,17 @@
+[gd_scene load_steps=6 format=3 uid="uid://col27bfk8o6av"]
+
+[ext_resource type="Script" path="res://Script/Spawner.gd" id="1_3wn2b"]
+[ext_resource type="PackedScene" uid="uid://bpxr884prt76" path="res://Scenes/Tree.tscn" id="2_ej4mo"]
+[ext_resource type="PackedScene" uid="uid://kf3tvavgk6fp" path="res://Scenes/Bird.tscn" id="3_77efj"]
+[ext_resource type="PackedScene" uid="uid://m0keqo8n152t" path="res://Scenes/Barrel.tscn" id="4_de8mw"]
+[ext_resource type="PackedScene" uid="uid://1050fgdnsldv" path="res://Scenes/Rock.tscn" id="5_nyh7p"]
+
+[node name="Random Spawner" type="Node2D"]
+script = ExtResource("1_3wn2b")
+RandomScene = Array[PackedScene]([ExtResource("2_ej4mo"), ExtResource("3_77efj"), ExtResource("4_de8mw"), ExtResource("5_nyh7p")])
+
+[node name="Container" type="Node" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
