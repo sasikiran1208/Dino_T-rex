@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://m0keqo8n152t"]
+
+[ext_resource type="Script" path="res://Script/Barrel.gd" id="1_6guck"]
+[ext_resource type="Texture2D" uid="uid://c2na8iq62xim6" path="res://Assets/img/obstacles/barrel.png" id="2_46tjv"]
+
+[node name="Barrel" type="Area2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_6guck")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_46tjv")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(1.68925, 1.99097)
+polygon = PackedVector2Array(-7.10374, -4.01815, -7.10374, -2.00907, -7.69571, -2.00907, -7.69571, 0, -7.10374, 0, -7.10374, 2.51134, -6.51176, 2.51134, -6.51176, 4.01815, -7.10374, 4.01815, -7.10374, 6.52949, 7.69571, 6.52949, 7.69571, 5.02268, 7.10374, 5.02268, 7.10374, -2.51134, 7.69571, -2.51134, 7.69571, -4.52041, 7.10374, -4.52041, 7.10374, -6.02722, 6.51176, -6.02722, 6.51176, -6.52949, 4.14385, -6.52949, 4.14385, -6.02722, 1.77593, -6.02722, 1.77593, -6.52949, 0, -6.52949, 0, -4.52041, -1.77593, -4.52041, -1.77593, -5.52495, -2.95989, -5.52495, -2.95989, -6.52949, -5.91978, -6.52949, -5.91978, -6.02722, -6.51176, -6.02722, -6.51176, -4.01815)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
