@@ -1,13 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://m0keqo8n152t"]
 
-[ext_resource type="Script" path="res://Script/Barrel.gd" id="1_6guck"]
-[ext_resource type="Texture2D" uid="uid://c2na8iq62xim6" path="res://Assets/img/obstacles/barrel.png" id="2_46tjv"]
+[ext_resource type="Script" uid="uid://c2fb1otm8rl34" path="res://Script/Barrel.gd" id="1_6guck"]
+[ext_resource type="Texture2D" uid="uid://dy5mlo2ks7qnv" path="res://Assets/img/obstacles/barrel.png" id="2_46tjv"]
 
 [node name="Barrel" type="Area2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_6guck")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.6249989, -0.24999905)
+scale = Vector2(0.62890625, 0.453125)
 texture = ExtResource("2_46tjv")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
