@@ -1,0 +1,298 @@
+[gd_scene load_steps=17 format=3 uid="uid://cv45ycw7g6hbm"]
+
+[ext_resource type="Script" path="res://Script/World.gd" id="1_h6hbp"]
+[ext_resource type="PackedScene" uid="uid://b8s0g01ng5js0" path="res://Scenes/Dino.tscn" id="2_1uaqc"]
+[ext_resource type="Texture2D" uid="uid://cysa04ywr7oi3" path="res://Assets/img/background/plx-1.png" id="2_d6vc4"]
+[ext_resource type="PackedScene" uid="uid://col27bfk8o6av" path="res://Scenes/Spawner.tscn" id="2_s313w"]
+[ext_resource type="PackedScene" uid="uid://dyy5ajro65teo" path="res://Scenes/Ground.tscn" id="2_ws1af"]
+[ext_resource type="Texture2D" uid="uid://bs8dvkk1vgt5h" path="res://Assets/img/background/plx-2.png" id="3_dxniu"]
+[ext_resource type="Texture2D" uid="uid://dt8hsfog1mjyq" path="res://Assets/img/background/plx-3.png" id="4_vmiva"]
+[ext_resource type="PackedScene" uid="uid://b7kwgqpxbwxvh" path="res://Scenes/UI.tscn" id="5_1vol0"]
+[ext_resource type="Texture2D" uid="uid://c2y3w4ij2n3sa" path="res://Assets/img/background/plx-4.png" id="5_07g6l"]
+[ext_resource type="Texture2D" uid="uid://c4rlb0tycrggt" path="res://Assets/img/background/plx-5.png" id="6_1hxqi"]
+[ext_resource type="AudioStream" uid="uid://bx8kpfll1gunn" path="res://Assets/sound/Dead_1_1.mp3" id="11_fmsbl"]
+
+[sub_resource type="Animation" id="Animation_p1s40"]
+resource_name = "DayNight"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer1:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.356863, 0.0470588, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer2:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.301961, 0.0823529, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer3:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.894118, 0.266667, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer4:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.894118, 0.266667, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer5:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.964706, 0.341176, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o42yj"]
+resource_name = "NightDay"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer1:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.356863, 0.0470588, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer2:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 0.301961, 0.0823529, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer3:modulate")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.894118, 0.266667, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer4:modulate")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.894118, 0.266667, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer5:modulate")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.964706, 0.341176, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_xh4v3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Background/ParallaxBackground/ParallaxLayer/Layer5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7x4rs"]
+_data = {
+"DayNight": SubResource("Animation_p1s40"),
+"NightDay": SubResource("Animation_o42yj"),
+"RESET": SubResource("Animation_xh4v3")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpn25"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_h6hbp")
+
+[node name="Dino" parent="." instance=ExtResource("2_1uaqc")]
+z_index = 2
+position = Vector2(200, 514.474)
+
+[node name="Random Spawner" parent="." instance=ExtResource("2_s313w")]
+position = Vector2(200, 514.474)
+scale = Vector2(5, 5)
+
+[node name="Ground" parent="." instance=ExtResource("2_ws1af")]
+
+[node name="UI" parent="." instance=ExtResource("5_1vol0")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Day")
+libraries = {
+"": SubResource("AnimationLibrary_7x4rs")
+}
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Background"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background/ParallaxBackground"]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Layer1" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_d6vc4")
+
+[node name="Layer2" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_dxniu")
+
+[node name="Layer3" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("4_vmiva")
+
+[node name="Layer4" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("5_07g6l")
+
+[node name="Layer5" type="TextureRect" parent="Background/ParallaxBackground/ParallaxLayer"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("6_1hxqi")
+
+[node name="Day" type="Timer" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Skor" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.1
+
+[node name="Bow" type="TouchScreenButton" parent="."]
+position = Vector2(975, 338)
+rotation = 3.14159
+scale = Vector2(38.0116, -43.0817)
+shape = SubResource("RectangleShape2D_lpn25")
+action = "Bow"
+
+[node name="Jump" type="TouchScreenButton" parent="."]
+position = Vector2(208, 338)
+scale = Vector2(-38.0116, 43.0817)
+shape = SubResource("RectangleShape2D_lpn25")
+action = "Jump"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_fmsbl")
+volume_db = 15.0
+
+[connection signal="DinoDie" from="Dino" to="." method="_on_dino_dino_die"]
+[connection signal="Things" from="Random Spawner" to="." method="_on_random_spawner_things"]
+[connection signal="timeout" from="Day" to="." method="_on_day_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Skor" to="." method="_on_skor_timeout"]
