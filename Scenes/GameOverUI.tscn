@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://vlfy1s3xajqy"]
 
-[ext_resource type="Script" path="res://Script/GameOverUI.gd" id="1_eh62e"]
-[ext_resource type="Texture2D" uid="uid://dgrnctn2ns7v2" path="res://Assets/exchange.png" id="1_hrqgp"]
-[ext_resource type="FontFile" uid="uid://s15272omc2m3" path="res://Assets/retro.ttf" id="1_lfmrl"]
+[ext_resource type="Script" uid="uid://b71c46wh3kosj" path="res://Script/GameOverUI.gd" id="1_eh62e"]
+[ext_resource type="Texture2D" uid="uid://c2ygr7ooixpor" path="res://Assets/exchange.png" id="1_hrqgp"]
+[ext_resource type="FontFile" uid="uid://dn2ikpmshvmqa" path="res://Assets/retro.ttf" id="1_lfmrl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_buxkd"]
 font = ExtResource("1_lfmrl")

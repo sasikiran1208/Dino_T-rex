@@ -1,8 +1,8 @@
 [gd_scene load_steps=27 format=3 uid="uid://b8s0g01ng5js0"]
 
-[ext_resource type="Script" path="res://Script/Dino.gd" id="1_745sr"]
-[ext_resource type="Texture2D" uid="uid://c525jycvvecyd" path="res://Assets/img/mort.png" id="1_xqhpr"]
-[ext_resource type="AudioStream" uid="uid://dscpg6m666dta" path="res://Assets/sound/jump.wav" id="3_nht1n"]
+[ext_resource type="Script" uid="uid://klw8fttjnuum" path="res://Script/Dino.gd" id="1_745sr"]
+[ext_resource type="Texture2D" uid="uid://icu67ni5krnh" path="res://Assets/img/mort.png" id="1_xqhpr"]
+[ext_resource type="AudioStream" uid="uid://bqjabuo0gkmuy" path="res://Assets/sound/jump.wav" id="3_nht1n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_irvo4"]
 atlas = ExtResource("1_xqhpr")
